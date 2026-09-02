@@ -314,9 +314,8 @@ every part can be explained and defended, as requested.
   live solve attempts, the anti-cheat rollout, the 20-rollout batch)
   against real server-side state rather than trusting self-reports.
 - **Gemini (via a separate CLI agent, "Antigravity")** was used as a
-  second, independently-reviewed developer for two specific pieces under
-  `calibration/` and `second-category/`: the rollout-calibration harness
-  and the bonus web/LFI challenge. Every piece of work Gemini produced
+  second, independently-reviewed developer for the rollout-calibration
+  harness under `calibration/`. Every piece of work Gemini produced
   was reviewed against real, independently-run evidence (not trusted on
   claim) by Claude acting as architect before being accepted — including
   three rounds of rejected/corrected work (a `shell=True` risk, a
@@ -353,15 +352,12 @@ license-forge/
     scripted_baseline_driver.py
     run_rollouts.py
     README.md
-  second-category/                 # BONUS: a second CTF challenge (web/LFI), same
-    ...                             # trust-split scaffold, own README/rubric/anti-cheat,
-                                    # not required by the assignment -- answers Track A's
-                                    # "extend to other categories" bonus with a real build
   experiments/
     schnorr-nonce-forge/             # difficulty-calibration EXPERIMENT (disconfirmed
       ...                            # hypothesis, see "Difficulty-calibration experiment"
                                      # section above) -- not a second submission attempt
   run.sh                        # build / up / down / solve / grade / verify / reliability / clean
-  design-note.md
+  design-note.md                # the submitted 1-page design note
+  design-note-long.md            # the full project log this was trimmed from, kept for reference
   README.md
 ```
