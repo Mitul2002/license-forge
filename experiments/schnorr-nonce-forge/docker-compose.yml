@@ -1,0 +1,12 @@
+services:
+  license-forge-identity:
+    build:
+      context: .
+      dockerfile: environment/Dockerfile
+    image: schnorr-nonce-forge:latest
+    container_name: schnorr-nonce-forge
+    ports:
+      - "5000:5000"
+    network_mode: bridge
+    mem_limit: 512m
+    cpus: 1.0
